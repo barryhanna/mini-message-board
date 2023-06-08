@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  h2 Create a new message
+  form(action="/new" method="post")
+    fieldset
+        label(for="user") User
+        input(type="text")
+    fieldset
+        label(for="message") Message
+        textarea(name="message", cols="20", rows="3")
+    button(type='submit') Post
