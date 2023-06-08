@@ -2,8 +2,8 @@ extends layout
 
 block content
   h1= title
-  p Welcome to
-    em &nbsp;#{title}
+  p.welcome Welcome to
+    span.name-title &nbsp;#{title}
   .message-container
     ol
       each message in messages

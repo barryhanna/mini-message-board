@@ -96,7 +96,14 @@ h1 {
 }
 
 h2 {
-	color: rgba(0, 0, 0, 0.4);
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.welcome {
+}
+
+.name-title {
+	font-weight: bold;
 }
 
 button,
@@ -107,6 +114,7 @@ button,
 	color: #eee;
 	padding: 0.5rem 2rem;
 	border: 1px solid transparent;
+	border-radius: 5px;
 	width: max-content;
 	margin-left: auto;
 	margin-right: 1rem;
@@ -205,10 +213,15 @@ form > * + * {
 input[type='text'],
 textarea {
 	display: inline-block;
-	border: 1px solid #333;
+	border: 1px solid rgba(0, 0, 0, 0.6);
 	border-radius: 5px;
 	font-size: 1rem;
 	padding: 5px;
+	width: 100%;
+}
+
+button[type='submit'] {
+	margin-right: 0;
 }
 
 fieldset {
