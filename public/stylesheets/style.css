@@ -129,6 +129,10 @@ button:hover {
 	border: 1px solid currentColor;
 }
 
+ul {
+	list-style: none;
+}
+
 .container {
 	max-width: 800px;
 	margin-inline: auto;
@@ -136,4 +140,14 @@ button:hover {
 
 .container > * + * {
 	margin-top: 2rem;
+}
+
+.username {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.date-added {
+	font-style: italic;
+	opacity: 0.5;
+	font-size: 0.8rem;
 }
