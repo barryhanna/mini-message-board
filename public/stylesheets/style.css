@@ -188,8 +188,28 @@ ol {
 }
 
 .message-text {
+	position: relative;
 	font-size: 1.1rem;
-	padding-left: 2rem;
+	padding-left: 3rem;
+}
+
+.message-text::before,
+.message-text::after {
+	position: absolute;
+	color: rgba(0, 0, 0, 0.05);
+	font-size: 4rem;
+	font-family: 'Times New Roman', Times, serif;
+	top: -2.5rem;
+}
+
+.message-text::before {
+	content: '\201C';
+	left: 0.5rem;
+}
+
+.message-text::after {
+	content: '\201D';
+	right: 1rem;
 }
 
 .new-message-btn {
