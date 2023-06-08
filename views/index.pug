@@ -2,13 +2,15 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  ul
-    each message in messages
-      li
-        span.username #{message.user}
-        |&nbsp;on&nbsp;
-        span.date-added #{message.added}:&nbsp;
-        span #{message.text}
+  p Welcome to
+    em &nbsp;#{title}
+  .message-container
+    ol
+      each message in messages
+        li.message
+          .message-meta
+            span.username #{message.user}
+            span.date-added #{message.added.toLowerCase()}
+          .message-text #{message.text}
 
-  a(href="/new", title="new message") New message
+    a.button.new-message-btn(href="/new", title="new message") New message

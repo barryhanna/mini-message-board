@@ -43,7 +43,7 @@ router.get('/', function (req, res) {
 	});
 	res.render('index', {
 		title: 'Mini Message Board',
-		messages: formattedMessages,
+		messages: [...formattedMessages].reverse(),
 	});
 });
 
