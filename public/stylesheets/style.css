@@ -76,6 +76,7 @@ select {
 body {
 	padding: 50px;
 	color: #333;
+	background-color: #eee;
 	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
 		segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto,
 		noto, arial, sans-serif;
@@ -109,15 +110,16 @@ button,
 	display: inline-block;
 	background-color: #333;
 	font-weight: bold;
+	line-height: 1;
 	color: #eee;
-	padding: 0.5rem 2rem;
+	padding: 1rem 2rem;
 	border: 1px solid transparent;
 	border-radius: 5px;
 	width: max-content;
 	margin-left: auto;
 	margin-right: 1rem;
 	text-decoration: none;
-	transition: color 200ms ease-in, background-color 200ms ease-in;
+	transition: color 300ms ease-in, background-color 300ms ease-in;
 	cursor: pointer;
 }
 
@@ -176,7 +178,7 @@ ol {
 	/* align-items: top; */
 	background: #fff;
 	padding: 1rem;
-	box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 	border: 1px solid hsla(120, 0%, 85%, 1);
 	border-radius: 5px;
 	margin-bottom: 1em;
@@ -215,7 +217,7 @@ ol {
 .new-message-btn {
 	position: absolute;
 	margin-left: auto;
-	top: -3rem;
+	top: -4rem;
 	right: -1rem;
 }
 
@@ -241,7 +243,7 @@ textarea {
 }
 
 button[type='submit'] {
-	margin-right: 0;
+	margin-right: 1rem;
 }
 
 fieldset {
