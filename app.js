@@ -3,6 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var dotenv = require('dotenv').config();
+
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGO_URL);
+mongoose.Promise = global.Promise;
+mongoose.connection.on('error', (err) => {
+	console.error(`ERROR: ${err}`);
+});
+
+require('./models/Message');
+require('./models/User');
 
 var indexRouter = require('./routes/index');
 var app = express();

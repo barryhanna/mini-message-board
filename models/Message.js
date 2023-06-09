@@ -1,12 +1,9 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
+mongoose.Promise = global.Promise;
 
 const messageSchema = new Schema({
-	user: {
-		type: mongoose.Schema.ObjectId,
-		ref: 'user',
-		required: 'A message must have a user',
-	},
+	user: String,
 	text: String,
 	added: {
 		type: Date,
@@ -14,6 +11,4 @@ const messageSchema = new Schema({
 	},
 });
 
-const Message = mongoose.model('Message', messageSchema);
-
-export default Message;
+module.exports = mongoose.model('Message', messageSchema);
