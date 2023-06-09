@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Message = mongoose.model('Message');
+const xss = require('xss');
 
 function newMessage(req, res) {
 	res.render('new', { title: 'Mini Message Board' });
@@ -7,8 +8,8 @@ function newMessage(req, res) {
 
 async function addNewMessage(req, res) {
 	const message = new Message({
-		text: req.body.message,
-		user: req.body.username,
+		text: xss(req.body.message),
+		user: xss(req.body.username),
 		added: new Date(),
 	});
 	message.save().then(() => {
