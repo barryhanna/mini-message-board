@@ -11,11 +11,10 @@ async function addNewMessage(req, res) {
 		user: req.body.username,
 		added: new Date(),
 	});
-	message
-		.save()
-		.then(() => console.log(`Message by ${req.body.username} saved`));
-	console.log(message);
-	res.redirect('/');
+	message.save().then(() => {
+		console.log(`Message by ${req.body.username} saved`);
+		res.redirect('/');
+	});
 }
 
 module.exports = {
